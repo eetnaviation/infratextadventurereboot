@@ -1,0 +1,123 @@
+[
+	{
+		"id": 0,
+		"text": "You start your day like you start everyday, you are at work in a meeting. Your Boss (Paul) is telling you and your co-workers where you are going to be inspecting today, You are going to be inspecting the Hammer Valley Dam.",
+		"commands": {
+			"leave": 1,
+			"exit": 1
+		}
+	},
+	{
+		"id": 1,
+		"text": "You are in a corridor on the 7th floor, Your Boss reminds you to not forget your hard-hat.",
+		"commands": {
+			"stairs": 3,
+			"look": 2
+		}
+	},
+	{
+		"id": 2,
+		"text": "You can see some stairs, your co-workers are talking about public transport and how the tunnels arent going to suddenly collapse.",
+		"commands": {
+			"stairs": 3,
+			"look": 2
+		}
+	},
+	{
+		"id": 3,
+		"text": "You try to get to the stairs but fail. You spot an elevator nearby.",
+		"commands": {
+			"elevator": 4,
+			"stairs": 3
+		}
+	},
+	{
+		"id": 4,
+		"text": "While exiting the door you look down to the lobby area.",
+		"commands": {
+			"elevator": 5
+		}
+	},
+	{
+		"id": 5,
+		"text": "You enter the elevator. You press the button for the 8th floor.",
+		"commands": {
+			"wait": 6
+		}
+	},
+	{
+		"id": 6,
+		"text": "You wait patiently as you get to the 8th floor. While exiting you look at the gray-sky and a cruise ship. You think if you should stay here a bit more or get your gear.",
+		"commands": {
+			"gear": 7,
+			"stay": 6
+		}
+	},
+	{
+		"id": 7,
+		"text": "You go to your office, get your gear (Flashlight, Hard-Hat, Camera and car-keys). You think about taking a stroll through the server room. Or maybe sitting in your office chair a bit more?",
+		"commands": {
+			"leave": 8,
+			"stay": 7
+		}
+	},
+	{
+		"id": 8,
+		"text": "You go to the elevator get on, press the button for the 1st floor and wait.",
+		"commands": {
+			"wait": 9
+		}
+	},
+	{
+		"id": 9,
+		"text": "Suddenly when you get to the 3rd floor the elevator brakes. The lights turn off and a fuse panel cover falls off. You remember something about opening the doors by resetting the fuses.",
+		"commands": {
+			"reset-fuses": 10
+		}
+	},
+	{
+		"id": 10,
+		"text": "You get out of the elevator unharmed. You say: Guess I'll have to take the stairs. You go to the stairs.",
+		"commands": {
+			"down": 11
+		}
+	},
+	{
+		"id": 11,
+		"text": "You go down a floor. You are now on the 2nd floor. The cafeteria is here.",
+		"commands": {
+			"down": 12,
+			"think": 11
+		}
+	},
+	{
+		"id": 12,
+		"text": "You go down a floor. You are now on the 1st floor. You take a stroll trough the server room. You see a note on the table.",
+		"commands": {
+			"note": 13,
+			"stay-in-server-room": 12
+		}
+	},
+	{
+		"id": 13,
+		"text": "The note reads: If you're reading this then congrats on getting out of that dumb game. Our servers have been hacked and the entire building is crazy.",
+		"commands": {
+			"continue": 14
+		}
+	},
+	{
+		"id": 14,
+		"text": "You get to the reception. You see a letter for you. You're worried it's a parking ticket. The receptionist tells you it's just a set of keys.",
+		"commands": {
+			"car": 15,
+			"think": 14
+		}
+	},
+	{
+		"id": 15,
+		"text": "You go to the garage. You take the car. You drive to the first location.",
+		"commands": {
+			"next-level": 0
+		}
+	}
+]

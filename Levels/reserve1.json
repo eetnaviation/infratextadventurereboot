@@ -1,0 +1,95 @@
+[
+	{
+		"id": 0,
+		"text": "You arrive in your red car. You look around. You see a small path leading under the bridge, and a bigger path going to a small power-plant.",
+		"commands": {
+			"road": 5,
+			"path": 1
+		}
+	},
+	{
+		"id": 1,
+		"text": "You call your boss (Paul) and inform him of your arrival. You ask him for any last minute surveying tips. Take pictures of anything thats broken or documents of interest along the way to help our cause. You go under the bridge.",
+		"commands": {
+			"walk-forward": 2
+		}
+	},
+	{
+		"id": 2,
+		"text": "You get to the other side of the bridge and see a broken water-flow meter.",
+		"commands": {
+			"fix-it": 3
+		}
+	},
+	{
+		"id": 3,
+		"text": "You power on the water-flow meter and take a few pictures of the broken bridge support-pillars.",
+		"commands": {
+			"back": 4
+		}
+	},
+	{
+		"id": 4,
+		"text": "You arrive back to your car. You look around. You see a small path leading under the bridge, and a bigger path going to a small power-plant.",
+		"commands": {
+			"road": 5
+		}
+	},
+	{
+		"id": 5,
+		"text": "You walk towards the power-plant and take pictures of a tipped over oil barrel. You get to the door. It's locked. You try your keys. It opens.",
+		"commands": {
+			"activate-fuse-panel": 6
+		}
+	},
+	{
+		"id": 6,
+		"text": "You activate the fuse panel. It sparks but you don't see anything happen.",
+		"commands": {
+			"next-room": 7
+		}
+	},
+	{
+		"id": 7,
+		"text": "You go to the next room. You see some generators below you. One of them is broken. You see a logbook. You see a door",
+		"commands": {
+			"logbook": 10,
+			"door": 8
+		}
+	},
+	{
+		"id": 8,
+		"text": "You open the door. You see some bolt cutters in there.",
+		"commands": {
+			"take-boltcutters": 9
+		}
+	},
+	{
+		"id": 9,
+		"text": "You take the boltcutters and head back. You see a logbook.",
+		"commands": {
+			"logbook": 10
+		}
+	},
+	{
+		"id": 10,
+		"text": "You open the logbook and see that the last entry in the logbook was by J.K. from 13 years ago.",
+		"commands": {
+			"stairs": 11
+		}
+	},
+	{
+		"id": 11,
+		"text": "You see one of the generators is broken. You power it down. You head outside using the boltcutters. You take a picture of a broken transformer. You see a cabin. You go inside. There's nothing. You head forward. You reroute a train so it doesn't crash into a fallen tree. You head into the dam.",
+		"commands": {
+			"fix-elevator": 12
+		}
+	},
+	{
+		"id": 12,
+		"text": "You fix the elevator and head into the Hammer Valley Dam. You take a picture of a giant crack in the dam.",
+		"commands": {
+			"next-level": 1
+		}
+	}
+]

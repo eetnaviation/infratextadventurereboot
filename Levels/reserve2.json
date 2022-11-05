@@ -1,0 +1,58 @@
+[
+	{
+		"id": 0,
+		"text": "You make your way down with the elevator. It suddenly breaks and you climb out. You see a security room.",
+		"commands": {
+			"room": 1
+		}
+	},
+	{
+		"id": 1,
+		"text": "You enter the security-room. There is a door-control-panel and a light switch",
+		"commands": {
+			"light-switch": 3,
+			"doors": 2
+		}
+	},
+	{
+		"id": 2,
+		"text": "You set all the doors to unlocked and leave. You see a door with a green light",
+		"commands": {
+			"door": 4
+		}
+	},
+	{
+		"id": 3,
+		"text": "You flick the light switch but nothing happens",
+		"commands": {
+			"continue": 1
+		}
+	},
+	{
+		"id": 4,
+		"text": "You enter the door with a green light and see shelves. There's nothing useful on them so you move onto the next room. It has a lab-door and a stairwell",
+		"commands": {
+			"stairwell": 6,
+			"lab-door": 5
+		}
+	},
+	{
+		"id": 5,
+		"text": "You try the door. It's locked.",
+		"commands": {
+			"continue": 4
+		}
+	},
+	{
+		"id": 6,
+		"text": "You head down the stairwell. There is a door that has a red light and another corridor. You head to the corridor and then to an another one. You climb into the high-voltage-switchboard-area.",
+		"commands": {
+			"power-lab": 8,
+			"power-turbine-hall": 7
+		}
+	},
+	{
+		"id": 7,
+		"text": "You turn on the power for the turbine hall.",
+	}
+]
