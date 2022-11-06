@@ -1,6 +1,6 @@
 import json
 
-levelspath = "levels/"
+levelspath = "Levels/"
 
 file = open(levelspath+"start.json","rb")
 start = json.loads(file.read().decode("utf-8-sig"))
