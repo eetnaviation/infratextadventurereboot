@@ -9,6 +9,7 @@
 	},
 	{
 		"id": 1,
+		"playsound": "sound/music/cracks.wav",
 		"text": "You are in a corridor on the 7th floor, Your Boss reminds you to not forget your hard-hat.",
 		"commands": {
 			"stairs": 3,
