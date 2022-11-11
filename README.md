@@ -1,6 +1,7 @@
 # infratextadventurereboot
 Reboot of the INFRA Text Adventure
 
+menu.json under development!
 
 Current levels:
   - office
