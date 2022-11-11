@@ -1,0 +1,10 @@
+[
+	{
+		"id": 1,
+		"text": "Menu screen. How would you like to start playing?",
+		"commands": {
+			"sound": 3,
+			"no-sound": 2
+		}
+	}
+]

@@ -32,7 +32,8 @@ while True:
 	if command[0] == "next-level" and levelfile == "reserve1" and position == 12:
 		levelfile = "reserve2"
 		position = 0
-        #Position change and commands
+	if command[0] == "next-level" and levelfile == "reserve2" and position == 9: levelfile = "reserve3"
+    #Position change and commands
 	if command[0] in level[position]["commands"]:
 		position = level[position]["commands"][command[0]]
 	else:

@@ -54,5 +54,22 @@
 	{
 		"id": 7,
 		"text": "You turn on the power for the turbine hall.",
+		"commands": {
+			"next": 9
+		}
+	},
+	{
+		"id": 8,
+		"text": "You turn on the power to the lab",
+		"commands": {
+			"next": 9
+		}
+	},
+	{
+		"id": 9,
+		"text": "You check out the lab, cross the electrified and flooded turbine hall, listen to hartman's speech, head trough the sawmill and head to the cave entrance.",
+		"commands": {
+			"next-level": 9
+		}
 	}
 ]
