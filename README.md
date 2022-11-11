@@ -1,9 +1,11 @@
 # infratextadventurereboot
 Reboot of the INFRA Text Adventure
 
+Just run game.py and enjoy!
+
 menu.json under development!
 
-Current levels:
+Current levels (Format: level-name level-status):
   - office DONE
   - reserve1 DONE
   - reserve2 DONE
@@ -54,4 +56,3 @@ Current levels:
   - wasteland DEVELOPMENT NOT STARTED
   - city_gates DEVELOPMENT NOT STARTED
   
-Just run game.py and enjoy!
