@@ -48,9 +48,9 @@ Current levels (Format: level-name level-status):
   - npp DEVELOPMENT NOT STARTED
   - reactor DEVELOPMENT NOT STARTED
   - roof DEVELOPMENT NOT STARTED
-  - ending_1 DEVELOPMENT NOT STARTED
-  - ending_2 DEVELOPMENT NOT STARTED
-  - ending_3 DEVELOPMENT NOT STARTED
+  - ending_1 DONE
+  - ending_2 DONE
+  - ending_3 DONE
   - -- EASTER EGGS --
   - hallway DEVELOPMENT NOT STARTED
   - wasteland DEVELOPMENT NOT STARTED
