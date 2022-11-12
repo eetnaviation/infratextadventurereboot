@@ -3,6 +3,7 @@ import vpk
 import os
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
+import ctypes
 
 levelspath = "Levels/"
 infraPaths = ["/home/" + os.getlogin() + "/.local/share/Steam/steamapps/common/infra"]
@@ -32,7 +33,8 @@ if infraPath != None:
 	#getSong("sound/music/cracks.wav").play()
 	#getSong("sound/music/furnace.wav").play()
 else:
-	print("ERR122: Cannot play music")
+	if debugMode == 1: print("ERR122: Cannot play music")
+	ctypes.windll.user32.MessageBoxW(0, "ERR122 Game starting with no sounds!", "InfraTextAdventure-SoundParser", 0)
 
 file = open(levelspath+"start.json","rb")
 start = json.loads(file.read().decode("utf-8-sig"))
