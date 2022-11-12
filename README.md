@@ -1,9 +1,14 @@
 # infratextadventurereboot
 Reboot of the INFRA Text Adventure
 
-Just run game.py and enjoy!
+Just run windows.bat or linux.sh and enjoy!
 
 menu.json under development!
+
+Folders:
+/Levels/ - Contains level json files
+/execs/ - Contains game python scripts
+/update/ - Contains scripts to update packages
 
 Current levels (Format: level-name level-status):
   - office DONE
