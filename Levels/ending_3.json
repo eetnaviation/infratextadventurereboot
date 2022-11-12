@@ -1,14 +1,14 @@
 [
 	{
 		"id": 0,
-		"text": "You wake up in a small tenement that was for sale in Turnip Hill. Your boss is calling you.",
+		"text": "You wake up in your cottage in finland. You weren't able to save stalburg. A meltdown happened.",
 		"commands": {
 			"phone": 1
 		}
 	},
 	{
 		"id": 1,
-		"text": "You pick up your phone. Your boss is worried about where you live. He says that if you ever want to get back they might have something coming up.",
+		"text": "You pick up your phone. Your boss is worried about you. He asks how you are recovering. He also offers you a job if you want to come to stalburg one day.",
 		"commands": {
 			"continue": 2
 		}
