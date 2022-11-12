@@ -1,6 +1,7 @@
 import json
 import vpk
 import os
+import sys
 os.environ['PYGAME_HIDE_SUPPORT_PROMPT'] = "hide"
 import pygame
 import ctypes
@@ -27,13 +28,12 @@ def getSong(song):
 
 pygame.mixer.init()
 if infraPath != None:
-	if debugMode==1: print("Found INFRA Path: " + infraPath)
+	print("Found INFRA Path: " + infraPath)
 	musicVpk = vpk.open(infraPath + "/infra/pak01_dir.vpk")
 
 	#getSong("sound/music/cracks.wav").play()
 	#getSong("sound/music/furnace.wav").play()
 else:
-	if debugMode == 1: print("ERR122: Cannot play music")
 	ctypes.windll.user32.MessageBoxW(0, "ERR122 Game starting with no sounds!", "InfraTextAdventure-SoundParser", 0)
 
 file = open(levelspath+"start.json","rb")
@@ -62,7 +62,7 @@ while True:
 	if command[0] == "next-level" and levelfile == "reserve1" and position == 12:
 		levelfile = "reserve2"
 		position = 0
-        #Position change and commands
+	#Position change and commands
 	if command[0] in level[position]["commands"]:
 		position = level[position]["commands"][command[0]]
 		if level[position]["playsound"]:

@@ -9,7 +9,7 @@ echo ""
 read option
 if [ $option -eq 1 ]:
 	clear
-	py ./execs/nosound.py
+	py nosound.py
 if [ $option -eq 2 ]:
 	clear
-	py ./execs/sound.py
+	py sound.py

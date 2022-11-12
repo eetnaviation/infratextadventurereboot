@@ -14,7 +14,7 @@ if %option%==2 goto sound
 goto start
 :nosound
 cls
-py execs\nosound.py
+py nosound.py
 :sound
 cls
-py execs\sound.py
+py sound.py
