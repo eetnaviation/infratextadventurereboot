@@ -7,7 +7,7 @@ import pygame
 import ctypes
 
 levelspath = "Levels/"
-infraPaths = ["/home/" + os.getlogin() + "/.local/share/Steam/steamapps/common/infra"]
+infraPaths = "I:\Games\Steam\steamapps\common\INFRA"
 infraPath = None
 musicVpk = None
 debugMode = 1
@@ -20,7 +20,7 @@ def getSong(song):
 	if os.path.exists("tmp.wav"):
 		os.remove("tmp.wav")
 	tmpFile = open("tmp.wav", "wb")
-	tmpFile.write(musicVpk.get_file("sound/music/cracks.wav").read())
+	tmpFile.write(musicVpk.get_file("sound\music\cracks.wav").read())
 	tmpFile.close()
 	sound = pygame.mixer.Sound("tmp.wav")
 	os.remove("tmp.wav")
@@ -29,7 +29,7 @@ def getSong(song):
 pygame.mixer.init()
 if infraPath != None:
 	print("Found INFRA Path: " + infraPath)
-	musicVpk = vpk.open(infraPath + "/infra/pak01_dir.vpk")
+	musicVpk = vpk.open(infraPath + "\infra\pak01_dir.vpk")
 
 	#getSong("sound/music/cracks.wav").play()
 	#getSong("sound/music/furnace.wav").play()
