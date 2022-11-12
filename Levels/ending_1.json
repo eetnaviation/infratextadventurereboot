@@ -1,0 +1,13 @@
+[
+	{
+		"id": 0,
+		"text": "You wake up in a small tenement that was for sale in TUrnip Hill. Your boss is calling you.",
+		"commands": {
+			"phone": 1
+		}
+	},
+	{
+		"id": 1,
+		"text": "You pick up your phone."
+	}
+]
