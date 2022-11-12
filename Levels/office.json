@@ -1,6 +1,7 @@
 [
 	{
 		"id": 0,
+		"playsound": "sound/music/cracks.wav",
 		"text": "You start your day like you start everyday, you are at work in a meeting. Your Boss (Paul) is telling you and your co-workers where you are going to be inspecting today, You are going to be inspecting the Hammer Valley Dam.",
 		"commands": {
 			"leave": 1,
