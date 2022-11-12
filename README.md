@@ -1,5 +1,6 @@
 # infratextadventurereboot
-Reboot of the INFRA Text Adventure
+## Reboot of the INFRA Text Adventure
+### Credit to: eetnaviation, ThePiGuy24 and c-128
 
 Just run windows.bat or linux.sh and enjoy!
 
