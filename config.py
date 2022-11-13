@@ -6,6 +6,6 @@ config = {
   "save-file": "saves.json",
   "start-pos": {
     "level": "office",
-    "position": "0"
+    "position": "intro"
   }
 }

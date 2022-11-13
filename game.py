@@ -45,7 +45,7 @@ def loadSave():
 
 def writeSave():
 	global saveState
-	f = open(saveFile, "w")
+	f = open(config["save-file"], "w")
 	f.write(json.dumps(saveState, indent=4))
 	f.close()
 

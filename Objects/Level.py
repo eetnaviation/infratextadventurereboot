@@ -26,7 +26,6 @@ class Level(object):
   @staticmethod
   def setPosition(pos: str):
     global POSITION
-    print("pos: " + pos)
     POSITION = pos
     return None
   
@@ -72,8 +71,6 @@ class Level(object):
     for command in position.commands:
       if command.predicate():
         if command.label == prompt or command.shortId == prompt:
-          if command.onUse != None:
-            command.onUse()
-    
+          command.use()
 
     return None
