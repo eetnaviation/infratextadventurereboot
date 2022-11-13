@@ -1,4 +1,6 @@
 import json
+from Levels.office import init
+from Objects.Level import Level
 
 levelspath = "Levels/"
 
@@ -10,6 +12,12 @@ levelfile = start["file"]
 position = start["position"]
 currentlevel = ""
 debugMode = 1
+
+init()
+while True:
+	Level.promptUser()
+
+exit()
 
 while True:
 	if levelfile != currentlevel:
