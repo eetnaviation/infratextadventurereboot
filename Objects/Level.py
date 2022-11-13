@@ -1,17 +1,19 @@
 from Objects.Position import Position
 from typing import TypeVar
+from config import config
 import os
 
-POSITION: str = "0"
-LEVEL: str = "office"
-LEVELS: list = []
 T = TypeVar('T')
+POSITION: str = ""
+LEVEL: str = ""
+LEVELS: list[T] = []
 
 class Level(object):
   name: str = ""
   positions: list[Position] = []
 
   def __init__(self: T, name: str):
+    global LEVELS
     self.name = name
 
     LEVELS.append(self)
@@ -36,16 +38,20 @@ class Level(object):
   
   @staticmethod
   def promptUser():
+    global LEVEL, POSITION
     level: Level = None
     position: Position = None
 
-    os.system('cls' if os.name == 'nt' else 'clear')
-    print("Position on prompt:" + POSITION)
+    if config["clear-screen"]:
+      os.system('cls' if os.name == 'nt' else 'clear')
+    if config["debug-messages"]:
+      print("Position on prompt: " + POSITION)
 
 
     for level1 in LEVELS:
       if level1.name == LEVEL:
         level = level1
+    
     for position1 in level.positions:
       if (position1.name == POSITION):
         position = position1

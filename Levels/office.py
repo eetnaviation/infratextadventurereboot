@@ -4,7 +4,6 @@ from Objects.Command import Command
 
 idk = False
 
-
 def example():
     global idk
     idk = True
