@@ -17,7 +17,6 @@ class Level(object):
     self.name = name
 
     LEVELS.append(self)
-    return
   
   def addPosition(self: T, position: Position) -> T:
     self.positions.append(position)
@@ -44,8 +43,7 @@ class Level(object):
     if config["clear-screen"]:
       os.system('cls' if os.name == 'nt' else 'clear')
     if config["debug-messages"]:
-      print("Position on prompt: " + POSITION)
-
+      print("Position on prompt: " + LEVEL + ":" + POSITION)
 
     for level1 in LEVELS:
       if level1.name == LEVEL:

@@ -8,7 +8,6 @@ def grabGear():
   global grabbedGear
   grabbedGear = True
 
-
 Level("office")\
   .addPosition(Position("intro")\
     .addText("You start your day like you start everyday, you are at work in a meeting.")
