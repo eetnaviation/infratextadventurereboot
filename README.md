@@ -1,15 +1,9 @@
 # infratextadventurereboot
-## Reboot of the INFRA Text Adventure
-### Credit to: eetnaviation, ThePiGuy24 and c-128
+Reboot of the INFRA Text Adventure
 
-Just run windows.bat or linux.sh and enjoy!
+Just run game.py and enjoy!
 
 menu.json under development!
-
-Folders:
-/Levels/ - Contains level json files
-/execs/ - Contains game python scripts
-/update/ - Contains scripts to update packages
 
 Current levels (Format: level-name level-status):
   - office DONE
@@ -54,9 +48,9 @@ Current levels (Format: level-name level-status):
   - npp DEVELOPMENT NOT STARTED
   - reactor DEVELOPMENT NOT STARTED
   - roof DEVELOPMENT NOT STARTED
-  - ending_1 DONE
-  - ending_2 DONE
-  - ending_3 DONE
+  - ending_1 DEVELOPMENT NOT STARTED
+  - ending_2 DEVELOPMENT NOT STARTED
+  - ending_3 DEVELOPMENT NOT STARTED
   - -- EASTER EGGS --
   - hallway DEVELOPMENT NOT STARTED
   - wasteland DEVELOPMENT NOT STARTED
