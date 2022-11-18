@@ -1,0 +1,20 @@
+[
+	{
+		"id": 0,
+		"text": "You wake up in a small tenement that was for sale in Turnip Hill. Your boss is calling you.",
+		"commands": {
+			"phone": 1
+		}
+	},
+	{
+		"id": 1,
+		"text": "You pick up your phone. Your boss is worried about where you live. He says that if you ever want to get back they might have something coming up.",
+		"commands": {
+			"continue": 2
+		}
+	},
+	{
+		"id": 2,
+		"text": "Thank you for playing Infra Text Adventure REBOOTED!\nCREDITS:\nDeveloper - eetnaviation\nOriginal idea: ThePiGuy24\nMany thanks to everyone!"
+	}
+]
