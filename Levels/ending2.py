@@ -1,5 +1,6 @@
 from Objects.Level import Level
 from Objects.Position import Position
+from Objects.DocumentPosition import DocumentPosition
 from Objects.Command import Command
 from pygame.mixer import Sound
 from sound import getSong
@@ -37,5 +38,7 @@ def nextSong():
 
 Level("ending2")\
   .addPosition(Position("bed")\
-    .addCommand(Command(shortId="radio", label="Toggle Readio", onUse=toggleRadio, predicate=lambda:config.config["sound-enabled"]))  
-  )
+    .addCommand(Command(shortId="radio", label="Toggle Readio", onUse=toggleRadio, predicate=lambda:config.config["sound-enabled"]))
+    .addCommand(Command(shortId="ex", label="Goto example").moveToPosition(("example")))
+  )\
+  .addPosition(DocumentPosition("example", "ending2-example", "bed", "example\nexample\nexample"))

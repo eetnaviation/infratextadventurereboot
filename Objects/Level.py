@@ -21,11 +21,15 @@ class Level(object):
   def addPosition(self: T, position: Position) -> T:
     self.positions.append(position)
     return self
+  
 
   @staticmethod
   def setPosition(pos: str):
     global POSITION
+    if POSITION != "":
+      Level.getPosition(Level.getLevel(LEVEL), POSITION).onLeave()
     POSITION = pos
+    Level.getPosition(Level.getLevel(LEVEL), POSITION).onVisit()
     return None
   
   @staticmethod
@@ -33,6 +37,22 @@ class Level(object):
     global LEVEL
     LEVEL = level
     return None
+  
+  @staticmethod
+  def getLevel(name) -> T:
+    toReturn = None
+    for level1 in LEVELS:
+      if level1.name == name:
+        toReturn = level1
+    return toReturn
+  
+  @staticmethod
+  def getPosition(level: T, name: str) -> Position:
+    toReturn = None
+    for position1 in level.positions:
+      if (position1.name == name):
+        toReturn = position1
+    return toReturn
   
   @staticmethod
   def promptUser():
