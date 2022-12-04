@@ -18,4 +18,3 @@ Level("ending2")\
     .addCommand(Command(shortId="radio", label="Toggle Readio", onUse=radio.toggle, predicate=lambda:config.config["sound-enabled"]))
     .addCommand(Command(shortId="ex", label="Goto example").moveToPosition(("example")))
   )\
-  .addPosition(DocumentPosition("example", "ending2-example", "bed", "example\nexample\nexample"))
