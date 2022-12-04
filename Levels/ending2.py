@@ -17,4 +17,4 @@ Level("ending2")\
   .addPosition(Position("bed")\
     .addCommand(Command(shortId="radio", label="Toggle Readio", onUse=radio.toggle, predicate=lambda:config.config["sound-enabled"]))
     .addCommand(Command(shortId="ex", label="Goto example").moveToPosition(("example")))
-  )\
+  )

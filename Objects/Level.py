@@ -2,6 +2,7 @@ from Objects.Position import Position
 from typing import TypeVar
 from config import config
 import os
+import inquirer
 
 T = TypeVar('T')
 POSITION: str = ""
@@ -79,16 +80,19 @@ class Level(object):
     
     print("")
 
-    print("Available Commands:")
+    choices: list[str] = []
     for command in position.commands:
       if command.predicate():
-        print("- [" + command.shortId + "] " + command.label)
+        choices.append(command.label)
     
-    prompt = input(">")
+    prompt = inquirer.prompt([inquirer.List("action", message="Next action:", choices=choices)])
+    
+    if prompt == None:
+      raise Exception("")
 
     for command in position.commands:
       if command.predicate():
-        if command.label == prompt or command.shortId == prompt:
+        if command.label == prompt["action"]:
           command.use()
 
     return None
