@@ -2,6 +2,7 @@ from Objects.Position import Position
 from typing import TypeVar
 from config import config
 import os
+import inquirer
 
 T = TypeVar('T')
 POSITION: str = ""
@@ -21,11 +22,15 @@ class Level(object):
   def addPosition(self: T, position: Position) -> T:
     self.positions.append(position)
     return self
+  
 
   @staticmethod
   def setPosition(pos: str):
     global POSITION
+    if POSITION != "":
+      Level.getPosition(Level.getLevel(LEVEL), POSITION).onLeave()
     POSITION = pos
+    Level.getPosition(Level.getLevel(LEVEL), POSITION).onVisit()
     return None
   
   @staticmethod
@@ -33,6 +38,22 @@ class Level(object):
     global LEVEL
     LEVEL = level
     return None
+  
+  @staticmethod
+  def getLevel(name) -> T:
+    toReturn = None
+    for level1 in LEVELS:
+      if level1.name == name:
+        toReturn = level1
+    return toReturn
+  
+  @staticmethod
+  def getPosition(level: T, name: str) -> Position:
+    toReturn = None
+    for position1 in level.positions:
+      if (position1.name == name):
+        toReturn = position1
+    return toReturn
   
   @staticmethod
   def promptUser():
@@ -59,16 +80,19 @@ class Level(object):
     
     print("")
 
-    print("Available Commands:")
+    choices: list[str] = []
     for command in position.commands:
       if command.predicate():
-        print("- [" + command.shortId + "] " + command.label)
+        choices.append(command.label)
     
-    prompt = input(">")
+    prompt = inquirer.prompt([inquirer.List("action", message="Next action:", choices=choices)])
+    
+    if prompt == None:
+      raise Exception("")
 
     for command in position.commands:
       if command.predicate():
-        if command.label == prompt or command.shortId == prompt:
+        if command.label == prompt["action"]:
           command.use()
 
     return None
