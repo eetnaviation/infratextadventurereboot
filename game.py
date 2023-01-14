@@ -1,3 +1,7 @@
+import json
+import os
+from os import environ
+environ['PYGAME_HIDE_SUPPORT_PROMPT'] = '1'
 import pygame
 import sound
 from save import Save
