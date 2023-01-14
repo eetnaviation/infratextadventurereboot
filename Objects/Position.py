@@ -35,3 +35,9 @@ class Position(object):
   def addTextPredicate(self: T, predicate: Callable[[], bool], text: str) -> T:
     self.texts.append(Text(predicate, text))
     return self
+  
+  def onVisit(self: T):
+    return
+  
+  def onLeave(self: T):
+    return
