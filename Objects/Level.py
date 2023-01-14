@@ -75,8 +75,7 @@ class Level(object):
         position = position1
 
     for text in position.texts:
-      if text.predicate():
-        print(text.label)
+      text.print()
     
     print("")
 
