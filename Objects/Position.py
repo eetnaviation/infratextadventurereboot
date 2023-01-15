@@ -32,9 +32,13 @@ class Position(object):
   def addText(self: T, text: str) -> T:
     return self.addTextPredicate((lambda: True), text)
 
-  def addTextPredicate(self: T, predicate: Callable[[], bool], text: str) -> T:
-    self.texts.append(Text(predicate, text))
+  def addTextFull(self: T, text: Text) -> T:
+    self.texts.append(text)
     return self
+
+  def addTextPredicate(self: T, predicate: Callable[[], bool], text: str) -> T:
+    return self.addTextFull(Text(predicate=predicate, label=text))
+  
   
   def onVisit(self: T):
     return
