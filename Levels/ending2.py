@@ -2,14 +2,11 @@ from Objects.Level import Level
 from Objects.Position import Position
 from Objects.DocumentPosition import DocumentPosition
 from Objects.Command import Command
+from Objects.Text import Text
 from Utils.Radio import Radio
-from pygame.mixer import Sound
+from save import Save, SaveData
 from sound import getSong
-from threading import Thread
-from time import sleep
 import config
-import pygame
-import random
 
 radio: Radio = Radio(["sound/music/action.wav", "sound/music/radio4.wav"])
 
