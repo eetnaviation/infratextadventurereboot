@@ -40,7 +40,7 @@ Current levels (Format: level-name level-status):
   - business DEVELOPMENT NOT STARTED
   - business2 DEVELOPMENT NOT STARTED
   - officeblackout DEVELOPMENT NOT STARTED
-  - tails DEVELOPMENT NOT STARTED
+  - rails DEVELOPMENT NOT STARTED
   - tenements DEVELOPMENT NOT STARTED
   - river DEVELOPMENT NOT STARTED
   - villa DEVELOPMENT NOT STARTED
