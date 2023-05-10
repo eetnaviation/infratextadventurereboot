@@ -135,6 +135,6 @@ Level("office")\
   )\
   .addPosition(Position("garage")
     .addText("You are in the parking garage. You can go back upstairs or go into your car.")
-    .addCommand(Command(shortId="car", label="Enter your car").moveToLevel("reserve1"))
+    .addCommand(Command(shortId="car", label="Enter your car").moveToLevel("reserve1").moveToPosition("car"))
     .addCommand(Command(shortId="up", label="Go back upstairs").moveToPosition("1st-floor-fireexit"))
   )
