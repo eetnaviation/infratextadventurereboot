@@ -134,7 +134,7 @@ Level("reserve1")\
     .addText("You also see a railway bridge which is near the actual dam.")
     .addCommand(Command(shortId="village", label="Go to the village.").moveToPosition("village"))
     .addCommand(Command(shortId="cross", label="Cross the bridge").moveToPosition("railway-signal"))
-    .addCommand(Command(shortId="dam-entrance", label="Go to the damn entrance").moveToPosition("dam-entrance"))
+    .addCommand(Command(shortId="dam-entrance", label="Go to the dam entrance").moveToPosition("dam-entrance"))
   )\
   .addPosition(Position("village")\
     .addText("You are in the village. You see three houses but all are locked. There is also a broken power pole and you take a picture of it.")
