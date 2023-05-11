@@ -8,8 +8,8 @@ menu.json under development!
 Current levels (Format: level-name level-status):
   - office DONE
   - reserve1 DONE
-  - reserve2 DONE
-  - reserve3 UNDER DEVELOPMENT
+  - reserve2 DONE (Waiting to port to python)
+  - reserve3 UNDER DEVELOPMENT (Waiting to port to python)
   - tunnel1 DEVELOPMENT NOT STARTED
   - tunnel2 DEVELOPMENT NOT STARTED
   - tunnel3 DEVELOPMENT NOT STARTED
