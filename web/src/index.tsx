@@ -1,28 +1,50 @@
 /* @refresh reload */
-import { render } from 'solid-js/web';
+import { For, render } from 'solid-js/web';
+import { I18nContext, createI18nContext, useI18n } from '@solid-primitives/i18n';
+import PositionButton from './models/PositionButton';
+import Game from './models/Game';
+
+import { lang_en } from './lang/en';
 
 import "./css/index.css";
 
-render(() => <App />, document.getElementById('root')!);
-
-function App() {
+render(() => {
+  const lang = createI18nContext({
+    en: lang_en,
+  }, "en");
 
   return <>
-      <div class="main">
-        <div class="content">
-          <div class="text">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis velit sit quos necessitatibus a. Laborum numquam cum explicabo velit fuga voluptates ducimus, qui dolorum sint a et recusandae natus harum.
-            Nostrum doloremque saepe, sapiente labore, illum soluta illo aliquam excepturi unde eos velit nihil accusamus. Minus animi, totam tenetur quos molestiae fuga eum assumenda ducimus dignissimos doloremque minima quasi eveniet.
-            Consequatur id excepturi repudiandae molestiae, ab modi enim voluptate? Porro beatae esse quam minus, quis delectus sint recusandae consequuntur eaque sit, eligendi iure, qui distinctio odit obcaecati id quod incidunt.
-          </div>
+    <I18nContext.Provider value={lang}>
+      <App />
+    </I18nContext.Provider>
+  </>
+}, document.getElementById('root')!);
 
-          <div class="buttons">
-            <button class="button">Lorem ipsum dolor sit amet consectetur adipisicing elit.</button>
-            <button class="button">Lorem ipsum dolor sit amet consectetur adipisicing elit.</button>
-            <button class="button">Lorem ipsum dolor sit amet consectetur adipisicing elit.</button>
-          </div>
+function App() {
+  const [t] = useI18n();
+
+  return <>
+    <div class="main">
+      <div class="content">
+        <div class="text">
+          {Game.data.position?.id}
         </div>
 
+        <div class="buttons">
+          <For each={Game.data.position?.buttons || []}>
+            {(button: PositionButton) => {
+              if ((button.isVisible != undefined && button.isVisible()) || button.isVisible == undefined) return <>
+                <button
+                  class="button"
+                  onClick={button.onClick}
+                >
+                  {t(`${Game.data.level.id}.${Game.data.position.id}.button.${button.id}`)}
+                </button>
+              </>
+            }}
+          </For>
+        </div>
       </div>
+    </div>
   </>
 }
