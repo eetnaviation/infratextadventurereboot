@@ -7,6 +7,8 @@ import Game from './models/Game';
 import { lang_en } from './lang/en';
 
 import "./css/index.css";
+import Button from './ui/Button';
+import Flex from './ui/Flex';
 
 render(() => {
   const lang = createI18nContext({
@@ -30,20 +32,17 @@ function App() {
           {Game.data.position?.id}
         </div>
 
-        <div class="buttons">
+        <Flex direction="column">
           <For each={Game.data.position?.buttons || []}>
             {(button: PositionButton) => {
               if ((button.isVisible != undefined && button.isVisible()) || button.isVisible == undefined) return <>
-                <button
-                  class="button"
-                  onClick={button.onClick}
-                >
+                <Button onClick={button.onClick}>
                   {t(`${Game.data.level.id}.${Game.data.position.id}.button.${button.id}`)}
-                </button>
+                </Button>
               </>
             }}
           </For>
-        </div>
+        </Flex>
       </div>
     </div>
   </>

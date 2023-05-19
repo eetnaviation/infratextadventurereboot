@@ -1,0 +1,16 @@
+.flex {
+  display: flex;
+  gap: 1em;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex * {
+  width: 100%;
+}
