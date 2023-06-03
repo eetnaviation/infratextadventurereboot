@@ -31,6 +31,8 @@ export default class Game {
   }
 
   static setPosition(id: string) {
+    const pos = state.level!.positions.find(p => p.id == id);
+    console.log(`Setting position: ${id}: ${JSON.stringify(pos)}`);
     if (state.level == undefined) throw new Error("Illegal state. Level is undefined but trying to set position");
     setState({
       position: state.level!.positions.find(p => p.id == id),
