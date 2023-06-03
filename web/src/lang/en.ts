@@ -3,9 +3,7 @@ export const lang_en = {
     title: "Settings",
     saves: {
       title: "Saves",
-      load: "Load save",
-      save: "Save game",
-      save_ok: "Saved the game successfully."
+      reset: "Reset save",
     },
   },
   office: {

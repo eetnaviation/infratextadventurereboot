@@ -12,9 +12,13 @@ const [state, setState] = createStore<{
 export default class Game {
 
   static readonly state = state;
+  static readonly LEVELS: { [id: string]: Level<any> } = {
+    "office": level_office,
+  };
 
   static init() {
-    this.createDefaultSave();
+    if (localStorage.getItem("save")) this.loadGame();
+    else this.createDefaultSave();
   }
 
   static createDefaultSave() {
@@ -22,12 +26,14 @@ export default class Game {
       level: level_office,
       position: level_office.positions.find(p => p.id == level_office.defaultPosition),
     });
+    this.saveGame();
   }
 
   static setLevel(level: Level<any>) {
     setState({
       level: level,
     });
+    this.saveGame();
   }
 
   static setPosition(id: string) {
@@ -37,9 +43,26 @@ export default class Game {
     setState({
       position: state.level!.positions.find(p => p.id == id),
     });
+    this.saveGame();
   }
 
   static setLevelAndPosition(level: Level<any>, position: string) {
+    setState({
+      level: level,
+      position: level.positions.find(p => p.id == position),
+    });
+    this.saveGame();
+  }
+
+  static saveGame() {
+    localStorage.setItem("save", Date.now().toString());
+    localStorage.setItem("save-level", state.level?.id as string);
+    localStorage.setItem("save-position", state.position?.id as string);
+  }
+
+  static loadGame() {
+    const level = this.LEVELS[localStorage.getItem("save-level")!];
+    const position = localStorage.getItem("save-position");
     setState({
       level: level,
       position: level.positions.find(p => p.id == position),
