@@ -21,7 +21,7 @@ export default function Page() {
       <Flex direction="column">
         <For each={state.position?.buttons}>
           {(button) => <>
-            <Button>{t(`${state.level?.id}.${state.position?.id}.button.${button.id}`)}</Button>
+            <Button onClick={button.onClick}>{t(`${state.level?.id}.${state.position?.id}.button.${button.id}`)}</Button>
           </>}
         </For>
       </Flex>
