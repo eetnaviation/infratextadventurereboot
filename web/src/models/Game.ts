@@ -1,27 +1,46 @@
 import { createStore } from "solid-js/store";
-import { level_menu, position_menu_menu } from "../levels/menu";
 import Level from "./Level";
+import { createContext } from "solid-js";
+import Position from "./Position";
+import { level_office } from "../levels/level_office";
 
-const [data, setData] = createStore({
-  level: level_menu,
-  position: position_menu_menu,
-});
+const [state, setState] = createStore<{
+  level?: Level<any>;
+  position?: Position;
+}>({});
 
 export default class Game {
 
-  static readonly data = data;
+  static readonly state = state;
+
+  static init() {
+    this.createDefaultSave();
+  }
+
+  static createDefaultSave() {
+    setState({
+      level: level_office,
+      position: level_office.positions.find(p => p.id == level_office.defaultPosition),
+    });
+  }
 
   static setLevel(level: Level<any>) {
-    setData({
-      level,
+    setState({
+      level: level,
     });
-    //setData("level", level);
   }
 
   static setPosition(id: string) {
-    const position = data.level.positions.find(pos => pos.id == id);
-    if (position != undefined) setData({
-      position,
+    if (state.level == undefined) throw new Error("Illegal state. Level is undefined but trying to set position");
+    setState({
+      position: state.level!.positions.find(p => p.id == id),
+    });
+  }
+
+  static setLevelAndPosition(level: Level<any>, position: string) {
+    setState({
+      level: level,
+      position: level.positions.find(p => p.id == position),
     });
   }
 }

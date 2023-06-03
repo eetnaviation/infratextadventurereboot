@@ -1,17 +1,17 @@
 export const lang_en = {
-  menu: {
-    menu: {
-      button: {
-        load_game: "Load Game"
-      },
+  settings: {
+    title: "Settings",
+    saves: {
+      title: "Saves",
+      load: "Load save",
+      save: "Save game",
+      save_ok: "Saved the game successfully."
     },
-    load_game: {
+  },
+  office: {
+    meeting_room: {
       button: {
-        slot_1: "Slot 1",
-        slot_2: "Slot 2",
-        slot_3: "Slot 3",
-        slot_4: "Slot 4",
-        back: "Back",
+        next_slide: "Next slide",
       },
     },
   },
