@@ -145,7 +145,7 @@ Level("reserve1")\
   .addPosition(Position("dam-entrance")\
     .addText("You are inside the dam entrence. You spot an elevator downstairs.")
     .addCommand(Command(shortId="leave", label="Go back to the railway crossing").moveToPosition("railway-crossing"))
-    .addCommand(Command(shortId="elevator", label="Enter the elevator and go downstairs").moveToLevel("reserve2"))
+    .addCommand(Command(shortId="elevator", label="Enter the elevator and go downstairs").moveToLevel("reserve2").moveToPosition("elevator"))
   )\
   .addPosition(DocumentPosition("powerplant-note", "reserve1-powerplant-note", "powerplant-top-floor", POWERPLANT_NOTE))\
   .addPosition(DocumentPosition("shack-notes", "reserve1-shack-notes", "morning-wood-shack", SHACK_NOTE))\
