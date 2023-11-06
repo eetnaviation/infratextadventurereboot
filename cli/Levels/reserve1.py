@@ -125,7 +125,7 @@ Level("reserve1")\
     .addCommand(Command(shortId="leave", label="Leave the shack").moveToPosition("before-morning-wood-shack"))
   )\
   .addPosition(Position("railway-signal")\
-    .addText("You are at a railway bridge. You see a rail signal which you turn off just to be save. You also see the hammer valley damn in the distance.")
+    .addText("You are at a railway bridge. You see a rail signal which you turn off just to be safe. You also see the hammer valley damn in the distance.")
     .addCommand(Command(shortId="small", label="Go back to the small bridge").moveToPosition("before-morning-wood-shack"))
     .addCommand(Command(shortId="cross", label="Cross the bridge").moveToPosition("railway-crossing"))
   )\
