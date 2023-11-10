@@ -67,12 +67,12 @@ def pickupBoltCutters():
 Level("reserve1")\
   .addPosition(Position("car")\
     .addText("You just arrived. You look around. You see a small path leading under the bridge, and a bigger path going to a small power-plant.")\
-    .addText("You give your boss a call and ask about last minute tips. He says to take pictures of everything that is broken and technical documents.")\
+    .addText("You give your boss a call and ask about last minute tips. He says to take pictures of everything that is broken and all technical documents.")\
     .addCommand(Command(shortId="bridge", label="Go to bridge").moveToPosition("bridge"))\
     .addCommand(Command(shortId="pp", label="Go to the powerplant").moveToPosition(("powerplant-entrance")))
   )\
   .addPosition(Position("powerplant-entrance")\
-    .addText("You are at the entrance of the power plant. You see a damaged mini-dam and are right next to the rivier.")
+    .addText("You are at the entrance of the power plant. You see a damaged mini-dam and are right next to the river.")
     .addCommand(Command(shortId="pp", label="Enter the powerplant").moveToPosition("powerplant-top-floor"))
     .addCommand(Command(shortId="leave", label="Go back to your car").moveToPosition(("car")))
   )\
@@ -104,7 +104,7 @@ Level("reserve1")\
     .addCommand(Command(shortId="path", label="Follow the path").moveToPosition("before-morning-wood-shack"))
   )\
   .addPosition(Position("bridge")\
-    .addText("You are at the other side of the bridge. You see water messurement device and a crack in one of the bridges pillars.")
+    .addText("You are at the other side of the bridge. You see water measurement device and a crack in one of the bridges pillars.")
     # TODO: Add stalburg water messurement devices
     .addCommand(Command(shortId="leave", label="Go back to your car").moveToPosition("car"))
   )\
@@ -125,12 +125,12 @@ Level("reserve1")\
     .addCommand(Command(shortId="leave", label="Leave the shack").moveToPosition("before-morning-wood-shack"))
   )\
   .addPosition(Position("railway-signal")\
-    .addText("You are at a railway bridge. You see a rail signal which you turn off just to be safe. You also see the hammer valley damn in the distance.")
+    .addText("You are at a railway bridge. You see a rail signal which you turn off just to be safe. You also see the hammer valley dam in the distance.")
     .addCommand(Command(shortId="small", label="Go back to the small bridge").moveToPosition("before-morning-wood-shack"))
     .addCommand(Command(shortId="cross", label="Cross the bridge").moveToPosition("railway-crossing"))
   )\
   .addPosition(Position("railway-crossing")\
-    .addText("The railway crosses with a street. On one side you see a small village. On the other side of the road you see a dam entrance.")
+    .addText("The railway crosses with a street. On one side you see a small village. On the other side of the road you see the dam entrance.")
     .addText("You also see a railway bridge which is near the actual dam.")
     .addCommand(Command(shortId="village", label="Go to the village.").moveToPosition("village"))
     .addCommand(Command(shortId="cross", label="Cross the bridge").moveToPosition("railway-signal"))
