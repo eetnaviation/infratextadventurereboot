@@ -8,6 +8,13 @@ def grabGear():
   global grabbedGear
   grabbedGear = True
 
+def achievement(input):
+  global input
+  match input:
+    case "badCaseOfMondays":
+      .addText("ACHIEVEMENT: A bad case of mondays")
+      #TODO: Set some achievment variable
+
 Level("office")\
   .addPosition(Position("intro")\
     .addText("You start your day like you start everyday, you are at work in a meeting.")
@@ -15,12 +22,11 @@ Level("office")\
     .addCommand(Command(shortId="leave", label="Leave").moveToPosition("7th-floor-hallway"))
   )\
   .addPosition(Position("7th-floor-hallway")\
-    .addText("You are in the main hallway on the 7th floor. Your co-workers stand there and are talking about public transport and how the tunnels aren't going to suddenly collapse.")
+    .addText("You are in the main hallway on the 7th floor. Your co-workers stand there and are talking about public transport and how the tunnels might to suddenly collapse.")
     .addText("You see a door labeled Sauna and an elevator.")
     .addCommand(Command(shortId="elevator", label="Go to the elevator and go to the 8th floor").moveToPosition("8th-floor-hallway"))
     .addCommand(Command(shortId="sauna", label="Go to the Sauna").moveToPosition("sauna-bottom"))
-    #Maybe achievement?
-    .addCommand(Command(shortId="suicide", label="Jump into the aura and commit suicide."))
+    .addCommand(Command(shortId="suicide", label="Jump into the aura and commit suicide."), predicate=lambda:(achievement("badCaseOfMondays")))
   )\
   .addPosition(Position("8th-floor-hallway")\
     .addText("You are in the main hallway on the 8th floor.")
@@ -29,8 +35,7 @@ Level("office")\
     .addCommand(Command(shortId="office", label="Go to your office").moveToPosition("office"))
     .addCommand(Command(shortId="elevator", label="Go to the elevator and go to the 7th floor", predicate=lambda:(not grabbedGear)).moveToPosition("7th-floor-hallway"))
     .addCommand(Command(shortId="elevator", label="Go to the elevator and go to the first floor", predicate=lambda:grabbedGear).moveToPosition("elevator-broken"))
-    #Maybe achievement?
-    .addCommand(Command(shortId="suicide", label="Jump into the aura and commit suicide."))
+    .addCommand(Command(shortId="suicide", label="Jump into the aura and commit suicide.", predicate=lambda:(achievement("badCaseOfMondays"))))
   )\
   .addPosition(Position("office")\
     .addText("You are in your office. You take a look at your tasks for today and grab your gear.")
