@@ -1,0 +1,16 @@
+.button {
+  background-color: var(--theme-button-background);
+  border: 3px var(--theme-button-border) solid;
+  border-radius: 15px;
+
+  padding: .5rem .5rem;
+  font-size: 1.2rem;
+  text-align: left;
+  color: white;
+
+  cursor: pointer;
+}
+
+.button-disabled {
+  cursor: not-allowed;
+}
